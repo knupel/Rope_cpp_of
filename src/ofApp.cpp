@@ -1,10 +1,13 @@
 #include "ofApp.hpp"
 #include "./vec_function/vec_base.hpp"
-// #pragma once
+#include "rope.hpp" 
 
 //--------------------------------------------------------------
 void ofApp::setup(){
   vec2_base();
+  std::cout << "ROPE VERSION " << ROPE_VERSION << std::endl;
+  std::cout << "PI float" << PI << std::endl;
+  std::cout << "ROPE ARGENT " << r->ARGENT << std::endl;
 
 }
 

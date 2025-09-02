@@ -8,7 +8,6 @@
 */
 #ifndef ROPE_H
 # define ROPE_H
-
 #pragma once
 
 #include <iostream>
@@ -21,6 +20,7 @@
 #include "./template/utils/r_utils.hpp"
 #include "./class/R_Lexicon.hpp"
 #include "./template/vec/vec3.hpp"
+#include "./rope_constants.hpp"
 
 // class Singleton Rope
 class Rope : public R_Lexicon {
