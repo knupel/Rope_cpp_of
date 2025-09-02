@@ -17,12 +17,12 @@
 // fast 128
 float random_fast_128(vec4<uint32_t> &seed, float max) {
 	float res = random_fast_128(seed) / static_cast<float>(UINT_MAX);
-	return map<float>(res,0,1,0,max);
+	return mapping<float>(res,0,1,0,max);
 }
 
 float random_fast_128(vec4<uint32_t> &seed, float min, float max) {
 	float res = random_fast_128(seed) / static_cast<float>(UINT_MAX);
-	return map<float>(res,0,1,min,max);
+	return mapping<float>(res,0,1,min,max);
 }
 
 uint32_t random_fast_128(vec4<uint32_t> &seed) {
@@ -42,12 +42,12 @@ uint32_t random_fast_128(vec4<uint32_t> &seed) {
 // fast 32
 float random_fast_32(uint32_t seed, float max) {
 	float res = random_fast_32(seed) / static_cast<float>(UINT_MAX);
-	return map<float>(res,0,1,0,max);
+	return mapping<float>(res,0,1,0,max);
 }
 
 float random_fast_32(uint32_t seed, float min, float max) {
 	float res = random_fast_32(seed) / static_cast<float>(UINT_MAX);
-	return map<float>(res,0,1,min,max);
+	return mapping<float>(res,0,1,min,max);
 }
 
 uint32_t random_fast_32(uint32_t seed) {
@@ -63,12 +63,12 @@ uint32_t random_fast_32(uint32_t seed) {
 // fast 64
 double random_fast_64(uint32_t seed, double max) {
 	double res = random_fast_64(seed) / static_cast<double>(ULONG_MAX);
-	return map<double>(res,0,1,0,max);
+	return mapping<double>(res,0,1,0,max);
 }
 
 double random_fast_64(uint32_t seed, double min, double max) {
 	double res = random_fast_64(seed) / static_cast<double>(ULONG_MAX);
-	return map<double>(res,0,1,min,max);
+	return mapping<double>(res,0,1,min,max);
 }
 
 uint64_t random_fast_64(uint32_t seed) {

@@ -1,7 +1,10 @@
-#include "ofApp.h"
+#include "ofApp.hpp"
+#include "./vec_function/vec_base.hpp"
+// #pragma once
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+  vec2_base();
 
 }
 
@@ -12,6 +15,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+  
 
 }
 

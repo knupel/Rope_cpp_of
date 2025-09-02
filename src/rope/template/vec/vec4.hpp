@@ -469,9 +469,9 @@ public:
 	vec4 & pow(T const &pow);
 	vec4 & pow(T const &pow_x, T const &pow_y, T const &pow_z, T const &pow_w);
 
-	//map
-	vec4 & map(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst);
-	vec4 & map(vec4<T> const &start_src, vec4<T> const &stop_src, vec4<T> const &start_dst, vec4<T> const &stop_dst);
+	//mapping
+	vec4 & mapping(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst);
+	vec4 & mapping(vec4<T> const &start_src, vec4<T> const &stop_src, vec4<T> const &start_dst, vec4<T> const &stop_dst);
 
 
 
@@ -890,16 +890,16 @@ vec4<T>	& vec4<T>::pow(T const &pow_x, T const &pow_y, T const &pow_z, T const &
 }
 
 
-//map
+//mapping
 template <class T>
-vec4<T>	& vec4<T>::map(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst) {
-	vec2<T>::map(start_src, stop_src, start_dst, stop_dst);
+vec4<T>	& vec4<T>::mapping(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst) {
+	vec2<T>::mapping(start_src, stop_src, start_dst, stop_dst);
 	return *this;
 }
 
 template <class T>
-vec4<T>	& vec4<T>::map(vec4<T> const &start_src, vec4<T> const &stop_src, vec4<T> const &start_dst, vec4<T> const &stop_dst) {
-	vec2<T>::map(start_src, stop_src, start_dst, stop_dst);
+vec4<T>	& vec4<T>::mapping(vec4<T> const &start_src, vec4<T> const &stop_src, vec4<T> const &start_dst, vec4<T> const &stop_dst) {
+	vec2<T>::mapping(start_src, stop_src, start_dst, stop_dst);
 	return *this;
 }
 

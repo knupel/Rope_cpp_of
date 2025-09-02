@@ -1,5 +1,8 @@
 #include "ofMain.h"
-#include "ofApp.h"
+#include "ofApp.hpp"
+
+
+Rope *Rope::instance = 0;
 
 //========================================================================
 int main( ){

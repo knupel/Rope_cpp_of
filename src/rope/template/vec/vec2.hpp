@@ -128,9 +128,9 @@ public:
 	vec2 barycenter(vec2<T> const &other) const;
 
 
-	//map
-	vec2 & map(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst);
-	vec2 & map(vec2<T> const &start_src, vec2<T> const &stop_src, vec2<T> const &start_dst, vec2<T> const &stop_dst);
+	//mapping
+	vec2 & mapping(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst);
+	vec2 & mapping(vec2<T> const &start_src, vec2<T> const &stop_src, vec2<T> const &start_dst, vec2<T> const &stop_dst);
 
 
 
@@ -557,11 +557,11 @@ vec2<T>	vec2<T>::barycenter(vec2<T> const &other) const {
 }
 
 
-// map
+// mapping
 template <class T>
-vec2<T>	& vec2<T>::map(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst) {
+vec2<T>	& vec2<T>::mapping(T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst) {
 	for(unsigned short i = 0 ; i < this->get_size() ; i++) {
-		this->ref().at(i)[0] = ::map(	this->list().at(i),
+		this->ref().at(i)[0] = ::mapping(	this->list().at(i),
 																	start_src,stop_src, 
 																	start_dst,stop_dst);
 	}
@@ -569,9 +569,9 @@ vec2<T>	& vec2<T>::map(T const &start_src, T const &stop_src, T const &start_dst
 }
 
 template <class T>
-vec2<T>	& vec2<T>::map(vec2<T> const &start_src, vec2<T> const &stop_src, vec2<T> const &start_dst, vec2<T> const &stop_dst) {
+vec2<T>	& vec2<T>::mapping(vec2<T> const &start_src, vec2<T> const &stop_src, vec2<T> const &start_dst, vec2<T> const &stop_dst) {
 	for(unsigned short i = 0 ; i < this->get_size() ; i++) {
-		this->ref().at(i)[0] = ::map(	this->list().at(i), 
+		this->ref().at(i)[0] = ::mapping(	this->list().at(i), 
 																	start_src.ref().at(i)[0],stop_src.ref().at(i)[0], 
 																	start_dst.ref().at(i)[0],stop_dst.ref().at(i)[0]);
 	}
