@@ -1,15 +1,67 @@
 /**
-* Rope Lexicon
-* v 0.1.0
-* 2020-2020
+* Rope CONSTANTS
+* v 0.2.0
+* 2020-2025
 */
 
-#ifndef R_LEXICON_H
-# define R_LEXICON_H
+#ifndef R_CONSTANTS_H
+# define R_CONSTANTS_H
 
-class R_Lexicon {
+
+class R_Constants {
 public:
+	const double PI = 3.1415926535;
+	const double TWO_PI = 2*PI;
+	const double TAU = TWO_PI;
+
+	const float NORTH = -(PI *0.5f);
+	const float NORTH_EAST = -(PI *0.25f);
+	const float EAST = 0;
+	const float SOUTH_EAST = PI *0.25f;
+	const float SOUTH = PI * 0.5f;
+	const float SOUTH_WEST = PI * 0.75f;
+	const float WEST = PI;
+	const float NORTH_WEST = -(PI * 0.75f);
+
 	enum Constants {
+		ROPE_VERSION = 1,
+
+		NOTHING = 0,
+		NONE = 0,
+		// NULL = 0,  not availble because it's reserved value
+		BLANK = 0,
+
+		NORMAL = 1,
+		LINEAR = 1,
+
+		CORNER ,CORNERS, RADIUS, DIAMETER,
+		CENTER = 3,
+		SIDE = 9,
+		TOP = 101, BOTTOM,
+		OPEN = 1, CLOSE, // processing value
+		BEGIN = 701, END,
+		START = 701, STOP,
+		FIRST = 701, LAST, NEXT, PREVIOUS,
+		// MISC
+		MIX = 600, SPLIT,
+		SEED = 900, ROOT, TREE, LEAF, FLOWER,
+		STATIC = 1000, DYNAMIC,
+		// PHYSIC
+		FLUID = 200, GRAVITY, MAGNETIC,
+		// MATH PART
+		PERLIN = 887, CHAOS, ORDER, EQUATION,
+		RAND = 888, RANDOM = 888,
+		SIN = 350, COS, TAN,
+		POW = 2, SQUARE,
+		CARTESIAN = 500, POLAR,
+		QUARTER = 700, THIRD, HALF, TWO_THIRD, THREE_QUARTER, FULL,
+		// DESIGN PART
+		DRAW = 400,
+		FIT = 401, SCALE, SCALE_HORIZONTAL, SCALE_VERTICAL,
+		HORIZONTAL = 550, VERTICAL, DIAGONAL, CIRCULAR, SPIRAL, WAVE
+	};
+
+	enum Constants_Color {
 		RGB = 1,
 		HSB = 3,
 
@@ -248,8 +300,6 @@ public:
 		// FUSCHIA > #FD3F92 > 0.927193 , 0.7509881 , 0.99215686
 		FUSCHIA = -180334,
 
-
-
 		// VIOLET  > color(.7496,1,1);
 		VIOLET = -8453889,  
 		PURPLE = -8453889,
@@ -270,8 +320,6 @@ public:
 		// AUBERGINE > #370028 > 0.8787879 , 1.0 , 0.21568628
 		AUBERGINE = -13172696,
   };
-
 };
-
 
 #endif

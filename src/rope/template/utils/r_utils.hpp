@@ -27,14 +27,14 @@ void set_list(std::vector<V,A> &list, T ... elem) {
 
 
 /**
-* map > mapping
-* v 0.0.2
-* map alias mapping function inspired from Processing code, but reached in mode template to extend it.
+* mapping alias map in P5
+* v 0.0.1
+* mapping function inspired from Processing map code, but reached in mode template to extend it.
 * line : 5068
 * https://github.com/processing/processing/blob/master/core/src/processing/core/PApplet.java
 */
 template <typename T>
-T mapping(T const &arg, T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst)  {
+T mapping(T const &arg, T const &start_src, T const &stop_src, T const &start_dst, T const &stop_dst) {
 	T output = 0;
 	if(std::is_integral<T>::value) {
 		long double e1 = start_dst;
